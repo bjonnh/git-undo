@@ -1,1 +1,4 @@
 A way to remember how to unfuck a git repo
+
+If you install it in your PATH, you can access it just by doing :
+git undo
