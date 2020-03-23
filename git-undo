@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+echo "Looks like you messed something up."
+echo "-----------------------------------"
+if [ $1 = "more" ]; then
+   echo "You commited in the wrong branch:"
+   echo " git reset HEAD~ --soft"
+   echo " git stash"
+   echo " git checkout <thebranch>"
+   echo " git stash pop"
+   echo -e " <then you can commit again>\n"
+   echo "I want to undo an old commit (find the hash with git reflog)"
+   echo -e " git revert <hash>\n"
+   echo "I want to revert a change to a single file\n"
+   echo -e " git checkout <hash> -- <file>\n"
+   echo "There is more in git undo warrior"
+elif [ $1 = "warrior" ]; then
+   echo "I pushed it, but trust me nobody pulled it yet:"
+   echo " <Do what you have to do, then>"
+   echo " git push --force"
+else
+     echo "If you want to discard the changes you made and did not commit:"
+   echo -e "  git stash\n"
+   echo "If you want to discard every change you did not commit and get rid of them"
+   echo -e " git reset --hard\n"
+   echo "If you want to discard local change on one file (permanently):"
+   echo -e " git checkout -- <file>\n"
+   echo "If you want to correct a commit you didn't push yet:"
+   echo -e " git reset HEAD^\n"
+   echo "If you forgot to add something to your not pushed yet last commit:"
+   echo " git add <file>"
+   echo -e " git commit --amend --no-edit\n"
+   echo "If you messed up the commit message:"
+   echo -e " git commit --ammend\n"
+   echo "There is more, run git undo more"
+fi
