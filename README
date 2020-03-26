@@ -1,4 +1,12 @@
 A way to remember how to unfuck a git repo
+------------------------------------------
 
 If you install it in your PATH, you can access it just by doing :
-git undo
+$ git undo
+
+I made it so I know how to unfuck things when I'm without an internet connection.
+
+
+But if you have an internet connection you also have:
+https://ohshitgit.com/
+https://stackoverflow.com/questions/14075581/git-undo-all-uncommitted-or-unsaved-changes#14075772  (thanks Elliot W.)
