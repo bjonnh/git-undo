@@ -15,8 +15,10 @@ if [[ $1 == "more" ]]; then
    echo -e " git checkout <hash> -- <file>\n"
    echo "There is more in git undo warrior"
 elif [[ $1 = "warrior" ]]; then
-   echo "I pushed it, but trust me nobody pulled it yet:"
+   echo "I pushed it, but trust me nobody pulled it yet (but it may handle most cases):"
    echo " <Do what you have to do, then>"
+   echo " git push --force-with-lease"
+   echo "No hope left:"
    echo " git push --force"
 else
      echo "If you want to discard the changes you made and did not commit:"
